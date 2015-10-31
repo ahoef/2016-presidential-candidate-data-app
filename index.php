@@ -13,7 +13,7 @@
 	 	<link rel="stylesheet" href="styles/dest/base.min.css">
 	  	<link href='//fonts.googleapis.com/css?family=Lato:300,400|Oswald:400,300' rel='stylesheet' type='text/css'>
 
-	  	<?php require("partials/connect.php"); ?>
+	  	<?php require("includes/connect.php"); ?>
 
 	  	<script src="dest/js/site.min.js"></script>
 
@@ -33,12 +33,6 @@
 		<section class="content-container">
 			<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
 
-				<?php 
-
-
-
-			?>
-
 				<li class="candidate">
 					<img src="images/cropped/hillary-clinton.jpg" alt="Hillary Clinton" >
 					<h3>Hillary Clinton</h3>
@@ -47,16 +41,7 @@
 					<ul>
 						<?php
 							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Hillary Clinton'");
-							$numrows = mysql_num_rows($query);
-
-							if($numrows > 0){
-								while( $row = mysql_fetch_assoc( $query ) ){
-									$quote = $row['quote'];
-									$source = $row['source'];
-									$date = $row['date'];
-									echo '<li class="quote">"'.$quote.'" &mdash; '.$source.', '.$date.'</li>';
-								}
-							}
+							require("includes/quote_loop.php");
 						?>
 					</ul>
 				</li>
@@ -69,16 +54,7 @@
 					<ul>
 						<?php
 							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Ben Carson'");
-							$numrows = mysql_num_rows($query);
-
-							if($numrows > 0){
-								while( $row = mysql_fetch_assoc( $query ) ){
-									$quote = $row['quote'];
-									$source = $row['source'];
-									$date = $row['date'];
-									echo '<li class="quote">"'.$quote.'" &mdash; '.$source.', '.$date.'</li>';
-								}
-							}
+							require("includes/quote_loop.php");
 						?>
 					</ul>
 				</li>
@@ -91,16 +67,7 @@
 					<ul>
 						<?php
 							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Bernie Sanders'");
-							$numrows = mysql_num_rows($query);
-
-							if($numrows > 0){
-								while( $row = mysql_fetch_assoc( $query ) ){
-									$quote = $row['quote'];
-									$source = $row['source'];
-									$date = $row['date'];
-									echo '<li class="quote">"'.$quote.'" &mdash; '.$source.', '.$date.'</li>';
-								}
-							}
+							require("includes/quote_loop.php");
 						?>
 					</ul>
 				</li>
@@ -113,16 +80,7 @@
 					<ul>
 						<?php
 							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Donald Trump'");
-							$numrows = mysql_num_rows($query);
-
-							if($numrows > 0){
-								while( $row = mysql_fetch_assoc( $query ) ){
-									$quote = $row['quote'];
-									$source = $row['source'];
-									$date = $row['date'];
-									echo '<li class="quote">"'.$quote.'" &mdash; '.$source.', '.$date.'</li>';
-								}
-							}
+							require("includes/quote_loop.php");
 						?>
 					</ul>
 				</li>
@@ -135,16 +93,7 @@
 					<ul>
 						<?php
 							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Martin O'Malley");
-							$numrows = mysql_num_rows($query);
-
-							if($numrows > 0){
-								while( $row = mysql_fetch_assoc( $query ) ){
-									$quote = $row['quote'];
-									$source = $row['source'];
-									$date = $row['date'];
-									echo '<li class="quote">"'.$quote.'" &mdash; '.$source.', '.$date.'</li>';
-								}
-							}
+							require("includes/quote_loop.php");
 						?>
 					</ul>
 				</li>
@@ -157,16 +106,7 @@
 					<ul>
 						<?php
 							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Marco Rubio'");
-							$numrows = mysql_num_rows($query);
-
-							if($numrows > 0){
-								while( $row = mysql_fetch_assoc( $query ) ){
-									$quote = $row['quote'];
-									$source = $row['source'];
-									$date = $row['date'];
-									echo '<li class="quote">"'.$quote.'" &mdash; '.$source.', '.$date.'</li>';
-								}
-							}
+							require("includes/quote_loop.php");
 						?>
 					</ul>
 				</li>
@@ -179,16 +119,7 @@
 					<ul>
 						<?php
 							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Lawrence Lessig'");
-							$numrows = mysql_num_rows($query);
-
-							if($numrows > 0){
-								while( $row = mysql_fetch_assoc( $query ) ){
-									$quote = $row['quote'];
-									$source = $row['source'];
-									$date = $row['date'];
-									echo '<li class="quote">"'.$quote.'" &mdash; '.$source.', '.$date.'</li>';
-								}
-							}
+							require("includes/quote_loop.php");
 						?>
 					</ul>
 				</li>
@@ -201,16 +132,7 @@
 					<ul>
 						<?php
 							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Jeb Bush'");
-							$numrows = mysql_num_rows($query);
-
-							if($numrows > 0){
-								while( $row = mysql_fetch_assoc( $query ) ){
-									$quote = $row['quote'];
-									$source = $row['source'];
-									$date = $row['date'];
-									echo '<li class="quote">"'.$quote.'" &mdash; '.$source.', '.$date.'</li>';
-								}
-							}
+							require("includes/quote_loop.php");
 						?>
 					</ul>
 				</li>
@@ -221,11 +143,14 @@
 
 	<footer>
 
-		http://elections.huffingtonpost.com/pollster/2016-national-democratic-primary
+		<p>Visit these links to view the most up-to-date poll results for each party:</p>
+		<a href="http://elections.huffingtonpost.com/pollster/2016-national-democratic-primary">
+			2016 National Democratic Primary
+		</a>
 		<br>
-		http://elections.huffingtonpost.com/pollster/2016-national-gop-primary
-
+		<a href="http://elections.huffingtonpost.com/pollster/2016-national-gop-primary">
+			2016 National GOP Primary
+		</a>
+		
 	</footer>
 </html>
-
-<?php echo hi ?>
