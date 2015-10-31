@@ -1,0 +1,18 @@
+$white: #fff;
+$blackish: #444;
+$sans-serif: Helvetica, sans-serif;
+
+@mixin triangle {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-color: $white transparent transparent transparent;
+    position: absolute;
+}
+
+@import "_normalize";
+@import "_foundation";
+@import "_styles";
+@import "_icons";
+@import "_media-queries";
