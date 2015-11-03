@@ -15,6 +15,7 @@
 
 	  	<?php require("includes/connect.php"); ?>
 
+	  	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	  	<script src="dest/js/site.min.js"></script>
 
 	</head>
@@ -25,9 +26,36 @@
 			<h2>Quotes from 2016 Presidential Candidates</h2>
 		</header>
 
-		<section>
-			<form>
+		<section class="add-quote">
+			<h3>Add a quote that you've heard or read! </h3>
+			<form method='POST' action='index.php' id='new-quote-form'>
+				<label><strong>Who</strong> said it?</label>
+				<select name="candidate" required>
+					<option value="Hillary Clinton">Hillary Clinton</option>
+					<option value="Ben Carson">Ben Carson</option>
+					<option value="Bernie Sanders">Bernie Sanders</option>
+					<option value="Donald Trump">Donald Trump</option>
+					<option value="Martin O'Malley">Martin O'Malley</option>
+					<option value="Marco Rubio">Marco Rubio</option>
+					<option value="Lawrence Lessig">Lawrence Lessig</option>
+					<option value="Jeb Bush">Jeb Bush</option>
+				</select>
+
+				<label><strong>What</strong> did he or she say?</label>
+				<textarea type="text" name="quote" required></textarea>
+
+				<label><strong>Where</strong> did he or she say it?</label>
+				<input type="text" name="source" required ></input>
+
+				<label><strong>When</strong> was it from?</label>
+				<input type="text" name="date" required ></input>
+
+				<input type="submit" value="Submit"></input>
 			</form>
+
+
+			<?php print_r($_POST); ?>
+
 		</section>
 
 		<section class="content-container">
@@ -139,6 +167,10 @@
 			</ul>
 
 		</section>
+
+		<section class="add-quote">
+			<a href="">Add a quote!</a>
+		</section>
 	</body>
 
 	<footer>
@@ -147,10 +179,17 @@
 		<a href="http://elections.huffingtonpost.com/pollster/2016-national-democratic-primary">
 			2016 National Democratic Primary
 		</a>
-		<br>
 		<a href="http://elections.huffingtonpost.com/pollster/2016-national-gop-primary">
 			2016 National GOP Primary
 		</a>
+
+		<p>This project was built by Alexandra Hoefinger with php, MySQL, GulpJS, and Sass. <a href="https://github.com/ahoef/2016-presidential-candidate-data-app" title="View this project on github">View on github</a></p>
 		
 	</footer>
 </html>
+
+<script>
+$('#new-quote-form').on('submit', function() {
+	$.post('includes/add_quote.php');
+})
+</script>
