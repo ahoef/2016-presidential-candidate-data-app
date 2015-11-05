@@ -17,13 +17,16 @@ body {
 		background-color: #3D5F87;
 	    color: white;
 	    border-bottom: 20px solid #C76363;
-	    padding: 28px;
+	    padding: 40px;
 		h1 {
 			font-family: 'Raleway', sans-serif;
 			font-weight: 800;
 			font-size: 42px;
 			margin: 0;
     		margin-bottom: 10px;
+    		// @media #{$medium-up} {
+      //           font-size: 42px;
+      //       }
 		}
 		h2 {
 			font-weight: 400;
@@ -72,6 +75,24 @@ body {
 		margin-bottom: 15px;
 	}
 
+	.add-quote {
+		text-align: center;
+		margin: 85px 0;
+		a {
+			text-align: center;
+		    padding: 20px 50px;
+		    background-color: #3D5F87;
+		    border-radius: 5px;
+		    text-decoration: none;
+		    color: white;
+		    // box-shadow: 4px 4px #C76363;
+		    font-size: 24px;
+		    &:hover {
+		    	opacity: .7;
+		    }
+		}
+	}
+
 }
 
 footer {
@@ -85,14 +106,22 @@ footer {
     	text-decoration: none;
     	margin: 0 20px;
     	border-bottom: 1px solid white;
+    	font-size: 20px;
+    }
+    aside {
+    	// margin: 45px 0 35px 0;
+    	font-size: 14px;
     }
     .social-links {
     	list-style: none;
+    	padding-left: 0;
+    	margin: 70px 0 20px 0;
     	li {
     		display: inline-block;
     	}
     	a {
     		border-bottom: none;
+    		font-size: 32px;
     	}
     }
 }

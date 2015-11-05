@@ -26,7 +26,7 @@
 			<h2>Words from 2016 Presidential Candidates</h2>
 		</header>
 
-<!-- 		<section class="add-quote">
+<!--  		<section class="add-quote">
 			<h3>Add a quote that you've heard or read! </h3>
 			<form method='POST' action='index.php' id='new-quote-form'>
 				<label><strong>Who</strong> said it?</label>
@@ -56,7 +56,7 @@
 
 			<?php //print_r($_POST); ?>
 
-		</section>-->
+		</section> -->
 
 		<section class="content-container">
 			<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
@@ -161,7 +161,7 @@
 		</section>
 
 		<section class="add-quote">
-			<a href="">Add a quote!</a>
+			<a href="">Add a Quote!</a>
 		</section>
 	</body>
 
@@ -175,18 +175,13 @@
 			2016 National GOP Primary Polls
 		</a>
 
-		<aside>This project was built by Alexandra Hoefinger with PHP, MySQL, GulpJS, and Sass. <a href="https://github.com/ahoef/2016-presidential-candidate-data-app" title="View this project on github">View on github</a></aside>
-		  <ul class="social-links">
+		<ul class="social-links">
             <li><a href="https://github.com/ahoef" target="_blank"><i class="icon-github"></i></a></li>
             <li><a href="https://twitter.com/ahoefinger" target="_blank"><i class="icon-twitter"></i></a></li>
             <li><a href="mailto:alexandra.hoefinger@gmail.com"><i class="icon-mail"></i></a></li>
-          </ul>
+        </ul>
+
+        <aside>This site was built by Alexandra Hoefinger with PHP, MySQL, GulpJS, and Sass.</aside>
 		
 	</footer>
 </html>
-
-<script>
-$('#new-quote-form').on('submit', function() {
-	$.post('includes/add_quote.php');
-})
-</script>
