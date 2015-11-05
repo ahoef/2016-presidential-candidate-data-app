@@ -158,6 +158,20 @@
 				</li>
 			</ul>
 
+			<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2 polls-links">
+				<li class="polls-link">
+					<a href="http://elections.huffingtonpost.com/pollster/2016-national-democratic-primary" class="blue">
+						2016 National Democratic Primary Polls
+					</a>
+				</li>
+
+				<li class="polls-link">
+					<a href="http://elections.huffingtonpost.com/pollster/2016-national-gop-primary">
+						2016 National GOP Primary Polls
+					</a>
+				</li>
+			</ul>
+
 		</section>
 
 		<section class="add-quote">
@@ -166,14 +180,6 @@
 	</body>
 
 	<footer>
-
-		<!-- <p>Visit these links to view the most up-to-date poll results for each party:</p> -->
-		<a href="http://elections.huffingtonpost.com/pollster/2016-national-democratic-primary">
-			2016 National Democratic Primary Polls
-		</a>
-		<a href="http://elections.huffingtonpost.com/pollster/2016-national-gop-primary">
-			2016 National GOP Primary Polls
-		</a>
 
 		<ul class="social-links">
             <li><a href="https://github.com/ahoef" target="_blank"><i class="icon-github"></i></a></li>
