@@ -67,7 +67,7 @@
 					<h5>Former U.S. Secretary of State, Former Senator from New York</h5>
 					<ul>
 						<?php
-							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Hillary Clinton'");
+							$results = $db->query("SELECT * FROM app_data WHERE candidate = 'Hillary Clinton'");
 							require("includes/quote_loop.php");
 						?>
 					</ul>
@@ -79,7 +79,7 @@
 					<h5>Former Director of Pediatric Neurosurgery at Johns Hopkins Hospital</h5>
 					<ul>
 						<?php
-							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Ben Carson'");
+							$results = $db->query("SELECT * FROM app_data WHERE candidate = 'Ben Carson'");
 							require("includes/quote_loop.php");
 						?>
 					</ul>
@@ -91,7 +91,7 @@
 					<h5>Senator from Vermont, Former member of the Vermont House of Representatives</h5>
 					<ul>
 						<?php
-							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Bernie Sanders'");
+							$results = $db->query("SELECT * FROM app_data WHERE candidate = 'Bernie Sanders'");
 							require("includes/quote_loop.php");
 						?>
 					</ul>
@@ -103,7 +103,7 @@
 					<h5>Chairman and President of The Trump Organization, Chairman of Trump Plaza Associates, LLC, Chairman of Trump Atlantic City Associates, Host of NBC reality show 'The Apprentice'</h5>
 					<ul>
 						<?php
-							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Donald Trump'");
+							$results = $db->query("SELECT * FROM app_data WHERE candidate = 'Donald Trump'");
 							require("includes/quote_loop.php");
 						?>
 					</ul>
@@ -115,7 +115,7 @@
 					<h5>Former Governor of Maryland</h5>
 					<ul>
 						<?php
-							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Martin O'Malley");
+							$results = $db->query("SELECT * FROM app_data WHERE candidate = 'Martin O\'Malley'");
 							require("includes/quote_loop.php");
 						?>
 					</ul>
@@ -127,7 +127,7 @@
 					<h5>Senator from Florida, Former Speaker of the Florida House of Representatives</h5>
 					<ul>
 						<?php
-							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Marco Rubio'");
+							$results = $db->query("SELECT * FROM app_data WHERE candidate = 'Marco Rubio'");
 							require("includes/quote_loop.php");
 						?>
 					</ul>
@@ -139,7 +139,7 @@
 					<h5>Professor of Law at Harvard Law School, Founder of Creative Commons</h5>
 					<ul>
 						<?php
-							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Lawrence Lessig'");
+							$results = $db->query("SELECT * FROM app_data WHERE candidate = 'Lawrence Lessig'");
 							require("includes/quote_loop.php");
 						?>
 					</ul>
@@ -151,7 +151,7 @@
 					<h5>Governor of Florida</h5>
 					<ul>
 						<?php
-							$query = mysql_query("SELECT * FROM app_data WHERE candidate = 'Jeb Bush'");
+							$results = $db->query("SELECT * FROM app_data WHERE candidate = 'Jeb Bush'");
 							require("includes/quote_loop.php");
 						?>
 					</ul>

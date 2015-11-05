@@ -1,12 +1,9 @@
-<?php $numrows = mysql_num_rows($query);
+<?php
 
-if($numrows > 0){
-	while( $row = mysql_fetch_assoc( $query ) ){
-		$quote = $row['quote'];
-		$source = $row['source'];
-		$date = $row['date'];
-		echo '<li class="quote">"'.$quote.'" &mdash; '.$source.', '.$date.'</li>';
-	}
+$all_quotes = $results->fetchAll(PDO::FETCH_ASSOC);
+
+foreach($all_quotes as $single_quote) {
+	echo '<li class="quote">"'.$single_quote["quote"].'" <span class="quote-data">&mdash; '.$single_quote["source"].', '.$single_quote["date"].'</span></li>';
 }
 
 ?>
