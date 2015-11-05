@@ -9,13 +9,12 @@ body {
 
 	header {
 		text-align: center;
-		background-color: #3D5F87;
-	    color: white;
-	    border-bottom: 20px solid #C76363;
+		background-color: $darkBlue;
+	    color: $white;
+	    border-bottom: 20px solid $red;
 	    padding: 40px;
 		h1 {
-			font-family: 'Raleway', sans-serif;
-			font-weight: 800;
+			@include headlineType(800);
 			font-size: 42px;
 			margin: 0;
     		margin-bottom: 10px;
@@ -39,12 +38,12 @@ body {
     	margin-top: 60px;
 		&:nth-of-type(even){
 			h4 {
-				color: #C76363;
+				color: $red;
 			}
 		}
 		&:nth-of-type(odd){
 			h4 {
-				color: #4E89CC;
+				color: $mediumBlue;
 			}
 		}
 		h3 {
@@ -52,8 +51,7 @@ body {
 		    margin: 0;
 		    margin-top: 18px;
 		    font-size: 24px;
-		    font-family: 'Raleway', sans-serif;
-		    font-weight: 400;
+		    @include headlineType(400);
 		}
 		h4 {
 			display: inline-block;
@@ -62,13 +60,10 @@ body {
 		}
 	}
 
-	&.dark {
-		color: $blackish;
-	}
 	.quote {
 		margin-bottom: 20px;
 		.quote-data {
-			color: #aaa;
+			color: $lightGray;
 			font-style: italic;
 		}
 	}
@@ -79,9 +74,9 @@ body {
 		a {
 			text-decoration: none;
 			border-bottom: 1px solid;
-			color: #C76363;
+			color: $red;
 			&.blue {
-				color: #4E89CC;
+				color: $mediumBlue;
 			}
 		}
 	}
@@ -92,11 +87,11 @@ body {
 		a {
 			text-align: center;
 		    padding: 20px 50px;
-		    background-color: #3D5F87;
+		    background-color: $darkBlue;
 		    border-radius: 5px;
 		    text-decoration: none;
-		    color: white;
-		    // box-shadow: 4px 4px #C76363;
+		    color: $white;
+		    // box-shadow: 4px 4px $red;
 		    font-size: 24px;
 		    @include fadeOpacity(.25s);
 		}
@@ -106,9 +101,9 @@ body {
 
 footer {
 	text-align: center;
-	background-color: #C76363;
-    color: white;
-    border-top: 20px solid #3D5F87;
+	background-color: $red;
+    color: $white;
+    border-top: 20px solid $darkBlue;
     padding: 28px;
     aside {
     	// margin: 45px 0 35px 0;
@@ -123,9 +118,8 @@ footer {
     	}
     	a {
     		margin: 0 15px;
-    		color: white;
+    		color: $white;
     		text-decoration: none;
-    		border-bottom: none;
     		font-size: 32px;
     		@include fadeOpacity(.1s);
     	}

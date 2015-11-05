@@ -1,13 +1,25 @@
 $white: #fff;
 $blackish: #444;
+$red: #C76363;
+$darkBlue: #3D5F87;
+$mediumBlue: #4E89CC;
+$lightGray: #aaa;
+
 $sans-serif: 'Lato', sans-serif;
 
+
+@mixin headlineType($weight) {
+	font-family: 'Raleway', sans-serif;
+	font-weight: $weight;
+}
+
 @mixin fadeOpacity($speed) {
-	-webkit-transition: opacity $speed ease-in-out;
+	transition: opacity $speed ease-in-out;
     &:hover {
     	opacity: .7;
     }
 }
+
 
 @import "_normalize";
 @import "_foundation";
