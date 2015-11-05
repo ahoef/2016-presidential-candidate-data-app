@@ -1,12 +1,6 @@
 body {
 	font-family: $sans-serif;
 	color: $blackish;
-	// max-width: 1400px;
-	// padding: 50px;
-
-	// background-repeat: no-repeat;
-	// color: $blackish;
-	// text-align: center;
 
 	input {
 		color: $blackish;
@@ -17,7 +11,7 @@ body {
 		background-color: #3D5F87;
 	    color: white;
 	    border-bottom: 20px solid #C76363;
-	    padding: 40px;
+	    padding: 50px;
 		h1 {
 			font-family: 'Raleway', sans-serif;
 			font-weight: 800;
@@ -73,6 +67,10 @@ body {
 	}
 	.quote {
 		margin-bottom: 15px;
+		.quote-data {
+			color: #aaa;
+			font-style: italic;
+		}
 	}
 
 	.add-quote {
@@ -87,9 +85,7 @@ body {
 		    color: white;
 		    // box-shadow: 4px 4px #C76363;
 		    font-size: 24px;
-		    &:hover {
-		    	opacity: .7;
-		    }
+		    @include fadeOpacity(.25s);
 		}
 	}
 
@@ -122,69 +118,7 @@ footer {
     	a {
     		border-bottom: none;
     		font-size: 32px;
+    		@include fadeOpacity(.1s);
     	}
     }
 }
-
-// footer {
-// 	position: fixed;
-// 	bottom: 0;
-// 	left: 0;
-// 	right: 0;
-// 	background-color: $white;
-// 	opacity: 0.5;
-// 	padding: 16px;
-// 	.mini-footer a {
-// 		font-size: 16px;
-// 		&:hover {
-// 			cursor: pointer;
-// 		}
-// 		.caret {
-// 			padding-left: 15px;
-// 			&:after {
-// 				@include triangle;
-// 				top: 22px;
-//     			border: 7px solid transparent;
-//     			border-color: $blackish transparent transparent;
-// 			}
-// 			&.up {
-// 				&:after {
-// 					border-bottom: 7px solid $blackish;
-//     				border-top: 0px;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.expanded-footer {
-// 		position: relative;
-// 		line-height: 26px;
-// 		background-color: $white;
-// 		color: $blackish;
-// 		width: 55%;
-// 		margin: 0 auto;
-// 		font-size: 14px;
-// 	}
-// 	ul {
-// 		padding-left: 0;
-// 		list-style: none;
-// 		margin-bottom: 0;
-// 		li {
-// 			display: inline-block;
-// 			padding: 0 10px;
-// 			font-size: 28px;
-// 			&:last-child {
-// 				font-size: 28px;
-// 			}
-// 		}
-// 		a {
-// 			text-decoration: none;
-// 			color: $blackish;
-// 		}
-// 	}
-// 	.closed {
-// 		display: none;
-// 	}
-// 	.open {
-// 		display: block;
-// 	}
-// }
