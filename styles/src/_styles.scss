@@ -28,9 +28,14 @@ body {
 			font-size: 20px;
 		}
 	}
+
+	button {
+		@include button;
+	}
 	.content-container {
 		max-width: 1400px;
     	padding: 0 5%;
+    	margin: 0 auto;
 	}
 
 	.candidate {
@@ -66,7 +71,32 @@ body {
 			color: $lightGray;
 			font-style: italic;
 		}
+		&.hidden {
+			display: none;
+		}
 	}
+
+	.drawer-toggle {
+		position: relative;
+		cursor: pointer;
+		width: 75px;
+	    height: 50px;
+	    margin: 0 auto;
+		&:before {
+		 	@include caret(12px, 24px, $darkGray)
+		}
+		&:after {
+			@include caret(14px, 22px, $white)
+		}
+		&.rotate {
+			-webkit-transform: rotate(180deg);
+		    -moz-transform: rotate(180deg);
+		    -o-transform: rotate(180deg);
+		    -ms-transform: rotate(180deg);
+		    transform: rotate(180deg);
+		}
+	}
+
 
 	.polls-links {
 		text-align: center;
@@ -83,20 +113,52 @@ body {
 
 	.add-quote {
 		text-align: center;
-		margin: 85px 0;
-		a {
-			text-align: center;
-		    padding: 20px 50px;
-		    background-color: $darkBlue;
-		    border-radius: 5px;
-		    text-decoration: none;
-		    color: $white;
-		    // box-shadow: 4px 4px $red;
-		    font-size: 24px;
-		    @include fadeOpacity(.25s);
+		margin: 85px 0 30px 0 
+	}
+	.form-section {
+		max-width: 600px;
+    	margin: 0 auto;
+    	padding: 0 25px 80px 25px;
+    	#new-quote-form {
+    		margin-top: 75px;
+			select {
+				width: 250px;
+				height: 40px;
+				background-color: white;
+			}
+			label, input, textarea {
+				display: block;
+				width: 100%;
+			}
+			label {
+				margin-bottom: 10px;
+				strong {
+					font-size: 18px;
+				}
+			}
+			input, textarea, select {
+				margin-bottom: 30px;
+				padding: 10px;
+			}
+			input {
+				height: 40px;
+			}
+			textarea {
+				height: 100px;
+			}
+			input[type=submit] {
+				@include button;
+				height: 60px;
+			    width: 140px;
+			    padding: 10px;
+			    margin: 0 auto;
+			    font-size: 18px;
+			    margin-top: 45px;
+			}
+			display: none;
+
 		}
 	}
-
 }
 
 footer {
@@ -124,4 +186,26 @@ footer {
     		@include fadeOpacity(.1s);
     	}
     }
+}
+
+.quote-submitted {
+	position: relative;
+	.success-msg {
+		text-align: center;
+		padding: 50px;
+		h3 {
+			@include headlineType(400);
+			padding-bottom: 30px;
+		}
+		a {
+			@include button;
+			text-decoration: none;
+		}
+	}
+	footer {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
 }
