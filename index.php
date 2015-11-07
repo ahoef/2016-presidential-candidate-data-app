@@ -1,62 +1,10 @@
 <!DOCTYPE html>
 <html>
-	<head>
 
-	  	<meta charset="utf-8">
-	  	<meta name="viewport" content="width=device-width,initial-scale=1" />
-
-	  	<title>2016 Presidential Candidate Quotes</title>
-	  	<meta name="description" content="Hear it from them! A website featuring quotes from 2016 U.S. Presidential Candidates, built by Alexandra Hoefinger">
-
-
-	  	<link rel="icon" type="image/png" href="http://i.imgur.com/bsI3IOt.png">
-	 	<link rel="stylesheet" href="styles/dest/base.min.css">
-	  	<link href='https://fonts.googleapis.com/css?family=Raleway:400,800|Lato' rel='stylesheet' type='text/css'>
-
-	  	<?php require("includes/connect.php"); ?>
-
-	  	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-	  	<script src="dest/js/site.min.js"></script>
-
-	</head>
+	<?php require("includes/head.php"); ?>
 
 	<body>
-		<header>
-			<h1>Hear it from them!</h1>
-			<h2>Words from 2016 Presidential Candidates</h2>
-		</header>
-
-<!--  		<section class="add-quote">
-			<h3>Add a quote that you've heard or read! </h3>
-			<form method='POST' action='index.php' id='new-quote-form'>
-				<label><strong>Who</strong> said it?</label>
-				<select name="candidate" required>
-					<option value="Hillary Clinton">Hillary Clinton</option>
-					<option value="Ben Carson">Ben Carson</option>
-					<option value="Bernie Sanders">Bernie Sanders</option>
-					<option value="Donald Trump">Donald Trump</option>
-					<option value="Martin O'Malley">Martin O'Malley</option>
-					<option value="Marco Rubio">Marco Rubio</option>
-					<option value="Lawrence Lessig">Lawrence Lessig</option>
-					<option value="Jeb Bush">Jeb Bush</option>
-				</select>
-
-				<label><strong>What</strong> did he or she say?</label>
-				<textarea type="text" name="quote" required></textarea>
-
-				<label><strong>Where</strong> did he or she say it?</label>
-				<input type="text" name="source" required ></input>
-
-				<label><strong>When</strong> was it from?</label>
-				<input type="text" name="date" required ></input>
-
-				<input type="submit" value="Submit"></input>
-			</form> 
-
-
-			<?php //print_r($_POST); ?>
-
-		</section> -->
+		<?php require("includes/header.php"); ?>
 
 		<section class="content-container">
 			<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
@@ -71,6 +19,7 @@
 							require("includes/quote_loop.php");
 						?>
 					</ul>
+					<div class="drawer-toggle"></div>
 				</li>
 
 				<li class="candidate">
@@ -83,6 +32,7 @@
 							require("includes/quote_loop.php");
 						?>
 					</ul>
+					<div class="drawer-toggle"></div>
 				</li>
 
 				<li class="candidate">
@@ -95,6 +45,7 @@
 							require("includes/quote_loop.php");
 						?>
 					</ul>
+					<div class="drawer-toggle"></div>
 				</li>
 
 				<li class="candidate">
@@ -107,6 +58,7 @@
 							require("includes/quote_loop.php");
 						?>
 					</ul>
+					<div class="drawer-toggle"></div>
 				</li>
 
 				<li class="candidate">
@@ -119,6 +71,7 @@
 							require("includes/quote_loop.php");
 						?>
 					</ul>
+					<div class="drawer-toggle"></div>
 				</li>
 
 				<li class="candidate">
@@ -131,6 +84,7 @@
 							require("includes/quote_loop.php");
 						?>
 					</ul>
+					<div class="drawer-toggle"></div>
 				</li>
 
 				<li class="candidate">
@@ -143,6 +97,7 @@
 							require("includes/quote_loop.php");
 						?>
 					</ul>
+					<div class="drawer-toggle"></div>
 				</li>
 
 				<li class="candidate">
@@ -155,6 +110,7 @@
 							require("includes/quote_loop.php");
 						?>
 					</ul>
+					<div class="drawer-toggle"></div>
 				</li>
 			</ul>
 
@@ -175,19 +131,39 @@
 		</section>
 
 		<section class="add-quote">
-			<a href="">Add a Quote!</a>
+			<button>Add a Quote!</button>
 		</section>
+
+		<section class="form-section">
+			<form method='POST' action='includes/add_quote.php' id='new-quote-form'>
+
+					<label><strong>Who</strong> said it?</label>
+					<select name="candidate" required>
+						<option value="Hillary Clinton">Hillary Clinton</option>
+						<option value="Ben Carson">Ben Carson</option>
+						<option value="Bernie Sanders">Bernie Sanders</option>
+						<option value="Donald Trump">Donald Trump</option>
+						<option value="Martin O'Malley">Martin O'Malley</option>
+						<option value="Marco Rubio">Marco Rubio</option>
+						<option value="Lawrence Lessig">Lawrence Lessig</option>
+						<option value="Jeb Bush">Jeb Bush</option>
+					</select>
+
+				<label><strong>What</strong> did he or she say?</label>
+				<textarea type="text" name="quote" required></textarea>
+
+				<label><strong>Where</strong> did he or she say it?</label>
+				<input type="text" name="source" required ></input>
+
+				<label><strong>When</strong> was it from?</label>
+				<input type="text" name="date" required ></input>
+
+				<input type="submit" value="Submit"></input>
+			</form> 
+
+		</section>
+
+		<?php require("includes/footer.php"); ?>
+
 	</body>
-
-	<footer>
-
-		<ul class="social-links">
-            <li><a href="https://github.com/ahoef" target="_blank"><i class="icon-github"></i></a></li>
-            <li><a href="https://twitter.com/ahoefinger" target="_blank"><i class="icon-twitter"></i></a></li>
-            <li><a href="mailto:alexandra.hoefinger@gmail.com"><i class="icon-mail"></i></a></li>
-        </ul>
-
-        <aside>This site was built by Alexandra Hoefinger with PHP, MySQL, GulpJS, and Sass.</aside>
-		
-	</footer>
 </html>
