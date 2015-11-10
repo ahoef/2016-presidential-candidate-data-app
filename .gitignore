@@ -4,6 +4,7 @@
 .sass-cache/
 node_modules/
 dest/
+ftp/
 
 # files #
 ######################
