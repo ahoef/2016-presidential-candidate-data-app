@@ -1,7 +1,8 @@
 $white: #fff;
 $blackish: #444;
 $red: #C76363;
-$darkBlue: #3D5F87;
+// $darkBlue: #3D5F87;
+$darkBlue: #314E70;
 $mediumBlue: #4E89CC;
 $lightGray: #aaa;
 $darkGray: #888;
@@ -47,4 +48,3 @@ $sans-serif: 'Lato', sans-serif;
 @import "_foundation";
 @import "_styles";
 @import "_icons";
-@import "_media-queries";
