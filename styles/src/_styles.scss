@@ -127,6 +127,10 @@ body {
 			text-decoration: none;
 			border-bottom: 1px solid;
 			color: $red;
+			font-size: 20px;
+			@media #{$medium-up} {
+	        	font-size: 16px;
+	        }
 			&.blue {
 				color: $mediumBlue;
 			}
@@ -135,7 +139,7 @@ body {
 
 	.add-quote {
 		text-align: center;
-		margin: 85px 0 30px 0 
+		margin: 65px 0 30px 0 
 	}
 
 	.form-section {
@@ -219,7 +223,11 @@ footer {
 
 	.result-msg {
 		text-align: center;
-		padding: 50px;
+		padding: 50px 30px;
+		min-height: 300px;
+		@media #{$medium-up} {
+            min-height: 265px;
+        }
 		h3 {
 			@include headlineType(400);
 			padding-bottom: 30px;
@@ -231,9 +239,11 @@ footer {
 	}
 
 	footer {
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
+		@media #{$medium-up} {
+			position: absolute;
+			left: 0;
+			right: 0;
+            bottom: 0;
+        }
 	}
 }
