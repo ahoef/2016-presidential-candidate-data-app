@@ -14,7 +14,7 @@ body {
 	    border-bottom: 20px solid $red;
 	    padding: 25px;
 	    @media #{$medium-up} {
-                padding: 40px;
+            padding: 50px;
         }
 
 		h1 {
@@ -217,7 +217,7 @@ footer {
 .quote-submitted {
 	position: relative;
 
-	.success-msg {
+	.result-msg {
 		text-align: center;
 		padding: 50px;
 		h3 {
@@ -229,7 +229,7 @@ footer {
 			text-decoration: none;
 		}
 	}
-	
+
 	footer {
 		position: absolute;
 		left: 0;

@@ -137,8 +137,9 @@
 		<section class="form-section">
 			<form method='POST' action='includes/add_quote.php' id='new-quote-form'>
 
-					<label><strong>Who</strong> said it?</label>
+					<label><strong>Who</strong> said it?&nbsp;&#42;</label>
 					<select name="candidate" required>
+						<option value="">Select Candidate</option>
 						<option value="Hillary Clinton">Hillary Clinton</option>
 						<option value="Ben Carson">Ben Carson</option>
 						<option value="Bernie Sanders">Bernie Sanders</option>
@@ -149,15 +150,16 @@
 						<option value="Jeb Bush">Jeb Bush</option>
 					</select>
 
-				<label><strong>What</strong> did he or she say?</label>
+				<label><strong>What</strong> did he or she say?&nbsp;&#42;</label>
 				<textarea type="text" name="quote" required></textarea>
 
-				<label><strong>Where</strong> did he or she say it?</label>
+				<label><strong>Where</strong> did he or she say it?&nbsp;&#42;</label>
 				<input type="text" name="source" required ></input>
 
-				<label><strong>When</strong> was it from?</label>
+				<label><strong>When</strong> was it from?&nbsp;&#42;</label>
 				<input type="text" name="date" required ></input>
 
+				<label>&#42; required</label>
 				<input type="submit" value="Submit"></input>
 			</form> 
 
